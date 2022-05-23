@@ -1,24 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header{
+header {
     background-color: rgb(214, 211, 211);
     height: 70px;
     padding-left: 80px;
     padding-top: 20px;
 }
 
-body{
+body {
     background-color: rgb(233, 236, 236);
     font-family: 'Bebas Neue', cursive;
 }
 
 .sobre-imc {
     text-align: center;
-    background-image: url(../img/fita\ metrica.png);
+    background-image: url(img/fita_metrica.png);
     height: 250px;
 }
 
@@ -72,7 +72,8 @@ body{
     border: 1px solid black;
 }
 
-tr, td {
+tr,
+td {
     border: 1px solid black;
 }
 
@@ -89,4 +90,36 @@ tr, td {
 .tabela-imc {
     padding-right: 80px;
     padding-top: 20px;
+}
+
+@media only screen and (min-width: 413px) and (max-width: 900px) {
+    .sobre-imc {
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+    .dados {
+        padding-left: 120px;
+    }
+    .imc-header {
+        text-align: justify;
+    }
+    .dados-resultado-tabela {
+        display: flex;
+        flex-direction: column;
+    }
+    .tabela-imc {
+        flex-direction: column;
+        align-items: center;
+        border: 0px;
+        padding-left: 50px;
+    }
+    .resultado-situacao {
+        padding-left: 120px;
+    }
+    .dados-resultado {
+        flex-direction: column;
+        margin-right: 20px;
+        position: unset;
+    }
 }
