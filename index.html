@@ -6,127 +6,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../imc/css/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>IMC</title>
 </head>
 
 <body>
-    <header>
-        <div class="imc-header">
-            <h2>IMC</h2>
+    <div class="container">
+        <header>
+            <div class="imc-header">
+                <h2>IMC</h2>
+            </div>
+        </header>
+        <div class="sobre-imc">
+            <h2>Cálculo IMC</h2>
+            <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+            <p>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+            <br>
         </div>
-    </header>
-    <div class="sobre-imc">
-        <h2>Cálculo IMC</h2>
-        <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
-        <p>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
-        <br>
-    </div>
-    <div class="dados-resultado-tabela">
-        <div class="dados-resultado">
-            <div class="dados">
-                <div class="nome">
-                    <label for=""><b>Nome</b></label><br>
-                    <input type="text" id="nome" placeholder="Seu nome">
+        <div class="dados-resultado-tabela">
+            <div class="dados-resultado">
+                <div class="dados">
+                    <div class="nome">
+                        <label for=""><b>Nome</b></label><br>
+                        <input type="text" id="nome" placeholder="Seu nome">
+                    </div>
+                    <div class="peso">
+                        <label for=""><b>Peso (ex.: 67,2)</b></label><br>
+                        <input type="number" id="peso" placeholder="Seu peso">
+                    </div>
+                    <div class="altura">
+                        <label for=""><b>Altura (ex.: 1,70)</b></label><br>
+                        <input type="number" id="altura" placeholder="Sua altura">
+                    </div>
+                    <br>
+                    <div class="botao">
+                        <button class="botao-calcular" onclick="calcular()">Calcular IMC</button>
+                    </div>
                 </div>
-                <div class="peso">
-                    <label for=""><b>Peso (ex.: 67,2)</b></label><br>
-                    <input type="number" id="peso" placeholder="Seu peso">
-                </div>
-                <div class="altura">
-                    <label for=""><b>Altura (ex.: 1,70)</b></label><br>
-                    <input type="number" id="altura" placeholder="Sua altura">
-                </div>
-                <br>
-                <div class="botao">
-                    <button class="botao-calcular" onclick="calcular()">Calcular IMC</button>
+                <div class="resultado-situacao">
+                    <h3>Esse é seu IMC</h3>
+                    <div class="resultadoImc">
+
+                        <label for="">IMC</label><br>
+                        <input type="number" id="imc" disabled>
+                    </div>
+                    <div class="situacaoImc">
+                        <label for="">Situação</label><br>
+                        <input type="text" id="situacao" disabled>
+                    </div>
                 </div>
             </div>
-            <div class="resultado-situacao">
-                <h3>Esse é seu IMC</h3>
-                <div class="resultadoImc">
-
-                    <label for="">IMC</label><br>
-                    <input type="number" id="imc" disabled>
-                </div>
-                <div class="situacaoImc">
-                    <label for="">Situação</label><br>
-                    <input type="text" id="situacao" disabled>
-                </div>
+            <div class="tabela-imc">
+                <fieldset class="field">
+                    <legend class="legend">
+                        <h2>Tabela IMC</h2>
+                    </legend>
+                    <table class="table">
+                        <tr>
+                            <td>IMC</td>
+                            <td>CLASSIFICAÇÃO</td>
+                            <td>OBESIDADE (GRAU)</td>
+                        </tr>
+                        <tr>
+                            <td>MENOR QUE 18,5</td>
+                            <td>MAGREZA</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>ENTRE 18,5 E 24,9</td>
+                            <td>PESO NORMAL</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>ENTRE 25,00 E 29,9</td>
+                            <td>SOBREPESO</td>
+                            <td>I</td>
+                        </tr>
+                        <tr>
+                            <td>ENTRE 30,00 E 39,9</td>
+                            <td>OBESIDADE</td>
+                            <td>II</td>
+                        </tr>
+                        <tr>
+                            <td>MAIOR QUE 40,0</td>
+                            <td>OBESIDADE GRAVE</td>
+                            <td>III</td>
+                        </tr>
+                </fieldset>
+                </table>
             </div>
         </div>
-        <div class="tabela-imc">
-            <fieldset class="field">
-                <legend class="legend">
-                    <h2>Tabela IMC</h2>
-                </legend>
-                <table class="table">
-                    <tr>
-                        <td>IMC</td>
-                        <td>CLASSIFICAÇÃO</td>
-                        <td>OBESIDADE (GRAU)</td>
-                    </tr>
-                    <tr>
-                        <td>MENOR QUE 18,5</td>
-                        <td>MAGREZA</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>ENTRE 18,5 E 24,9</td>
-                        <td>PESO NORMAL</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>ENTRE 25,00 E 29,9</td>
-                        <td>SOBREPESO</td>
-                        <td>I</td>
-                    </tr>
-                    <tr>
-                        <td>ENTRE 30,00 E 39,9</td>
-                        <td>OBESIDADE</td>
-                        <td>II</td>
-                    </tr>
-                    <tr>
-                        <td>MAIOR QUE 40,0</td>
-                        <td>OBESIDADE GRAVE</td>
-                        <td>III</td>
-                    </tr>
-            </fieldset>
-            </table>
-        </div>
+
+        <script>
+            function calcular() {
+                let peso = document.getElementById('peso').value;
+                let altura = document.getElementById('altura').value;
+
+
+                let calculo = peso / (altura * altura);
+
+                document.getElementById('imc').value = calculo;
+
+
+                if (calculo <= 18.49) {
+                    document.getElementById('situacao').value = "Magreza";
+
+                } else if (calculo >= 18.50) {
+                    document.getElementById('situacao').value = "Peso Normal";
+
+                }
+                if (calculo >= 25.0) {
+                    document.getElementById('situacao').value = "Sobrepeso";
+
+                }
+                if (calculo >= 30.0) {
+                    document.getElementById('situacao').value = "Obesidade";
+
+                }
+                if (calculo >= 40.0) {
+                    document.getElementById('situacao').value = "Obesidade Grave";
+                }
+            }
+        </script>
     </div>
-
-    <script>
-        function calcular() {
-            let peso = document.getElementById('peso').value;
-            let altura = document.getElementById('altura').value;
-
-
-            let calculo = peso / (altura * altura);
-
-            document.getElementById('imc').value = calculo;
-
-
-            if (calculo <= 18.49) {
-                document.getElementById('situacao').value = "Magreza";
-
-            } else if (calculo >= 18.50) {
-                document.getElementById('situacao').value = "Peso Normal";
-
-            }
-            if (calculo >= 25.0) {
-                document.getElementById('situacao').value = "Sobrepeso";
-
-            }
-            if (calculo >= 30.0) {
-                document.getElementById('situacao').value = "Obesidade";
-
-            }
-            if (calculo >= 40.0) {
-                document.getElementById('situacao').value = "Obesidade Grave";
-            }
-        }
-    </script>
-
 </body>
 
 </html>
