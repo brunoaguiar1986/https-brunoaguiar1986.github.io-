@@ -99,12 +99,19 @@ td {
         justify-content: center;
         font-weight: bold;
     }
+    .texto-2 {
+        display: none;
+    }
     .imc-header {
-        padding-left: 90px;
-        text-align: justify;
+        padding-left: 70px;
     }
     .dados {
-        padding-left: 85px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        padding-left: 50px;
     }
     .dados-resultado-tabela {
         display: flex;
@@ -114,10 +121,9 @@ td {
         flex-direction: column;
         align-items: center;
         border: 0px;
-        padding-left: 30px;
     }
     .resultado-situacao {
-        padding-left: 85px;
+        text-align: center;
     }
     .dados-resultado {
         flex-direction: column;
