@@ -107,6 +107,7 @@ fieldset {
 }
 
 @media(max-width: 430px) {
+.sobre-imc{
         align-items: center;
         justify-content: center;
         font-weight: bold;
